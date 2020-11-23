@@ -14,6 +14,11 @@
 		45C71D96256C1E39009B8FD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C71D95256C1E39009B8FD4 /* Assets.xcassets */; };
 		45C71D99256C1E39009B8FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C71D97256C1E39009B8FD4 /* LaunchScreen.storyboard */; };
 		45C71DA9256C1F5D009B8FD4 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DA8256C1F5D009B8FD4 /* MainTabController.swift */; };
+		45C71DAE256C220B009B8FD4 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DAD256C220B009B8FD4 /* FeedController.swift */; };
+		45C71DB1256C2219009B8FD4 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DB0256C2219009B8FD4 /* SearchController.swift */; };
+		45C71DB4256C222F009B8FD4 /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DB3256C222F009B8FD4 /* ImageSelectorController.swift */; };
+		45C71DB7256C2242009B8FD4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DB6256C2242009B8FD4 /* NotificationController.swift */; };
+		45C71DBA256C2250009B8FD4 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DB9256C2250009B8FD4 /* ProfileController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		45C71D98256C1E39009B8FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45C71D9A256C1E39009B8FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45C71DA8256C1F5D009B8FD4 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		45C71DAD256C220B009B8FD4 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		45C71DB0256C2219009B8FD4 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		45C71DB3256C222F009B8FD4 /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
+		45C71DB6256C2242009B8FD4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		45C71DB9256C2250009B8FD4 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,11 @@
 			isa = PBXGroup;
 			children = (
 				45C71DA8256C1F5D009B8FD4 /* MainTabController.swift */,
+				45C71DAD256C220B009B8FD4 /* FeedController.swift */,
+				45C71DB0256C2219009B8FD4 /* SearchController.swift */,
+				45C71DB3256C222F009B8FD4 /* ImageSelectorController.swift */,
+				45C71DB6256C2242009B8FD4 /* NotificationController.swift */,
+				45C71DB9256C2250009B8FD4 /* ProfileController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,7 +204,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C71D91256C1E39009B8FD4 /* ViewController.swift in Sources */,
+				45C71DB4256C222F009B8FD4 /* ImageSelectorController.swift in Sources */,
+				45C71DB7256C2242009B8FD4 /* NotificationController.swift in Sources */,
+				45C71DB1256C2219009B8FD4 /* SearchController.swift in Sources */,
 				45C71D8D256C1E39009B8FD4 /* AppDelegate.swift in Sources */,
+				45C71DBA256C2250009B8FD4 /* ProfileController.swift in Sources */,
+				45C71DAE256C220B009B8FD4 /* FeedController.swift in Sources */,
 				45C71DA9256C1F5D009B8FD4 /* MainTabController.swift in Sources */,
 				45C71D8F256C1E39009B8FD4 /* SceneDelegate.swift in Sources */,
 			);
@@ -341,6 +361,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TNSM43P2F3;
 				INFOPLIST_FILE = InstagramUIKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -348,7 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.javiercueto.InstagramUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -360,6 +381,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TNSM43P2F3;
 				INFOPLIST_FILE = InstagramUIKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -367,7 +389,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.javiercueto.InstagramUIKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
