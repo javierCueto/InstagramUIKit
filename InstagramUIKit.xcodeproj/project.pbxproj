@@ -13,6 +13,7 @@
 		45C71D94256C1E39009B8FD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C71D92256C1E39009B8FD4 /* Main.storyboard */; };
 		45C71D96256C1E39009B8FD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C71D95256C1E39009B8FD4 /* Assets.xcassets */; };
 		45C71D99256C1E39009B8FD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C71D97256C1E39009B8FD4 /* LaunchScreen.storyboard */; };
+		45C71DA9256C1F5D009B8FD4 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DA8256C1F5D009B8FD4 /* MainTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		45C71D95256C1E39009B8FD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45C71D98256C1E39009B8FD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45C71D9A256C1E39009B8FD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45C71DA8256C1F5D009B8FD4 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,12 @@
 		45C71D8B256C1E39009B8FD4 /* InstagramUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				45C71DA6256C1EBE009B8FD4 /* Model */,
+				45C71DA5256C1EBC009B8FD4 /* View */,
+				45C71DA4256C1EBB009B8FD4 /* ViewModel */,
+				45C71DA3256C1EBA009B8FD4 /* Controller */,
+				45C71DA2256C1EB8009B8FD4 /* API */,
+				45C71DA1256C1EB5009B8FD4 /* Utils */,
 				45C71D8C256C1E39009B8FD4 /* AppDelegate.swift */,
 				45C71D8E256C1E39009B8FD4 /* SceneDelegate.swift */,
 				45C71D90256C1E39009B8FD4 /* ViewController.swift */,
@@ -65,6 +73,49 @@
 				45C71D9A256C1E39009B8FD4 /* Info.plist */,
 			);
 			path = InstagramUIKit;
+			sourceTree = "<group>";
+		};
+		45C71DA1256C1EB5009B8FD4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		45C71DA2256C1EB8009B8FD4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		45C71DA3256C1EBA009B8FD4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				45C71DA8256C1F5D009B8FD4 /* MainTabController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		45C71DA4256C1EBB009B8FD4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		45C71DA5256C1EBC009B8FD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		45C71DA6256C1EBE009B8FD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +190,7 @@
 			files = (
 				45C71D91256C1E39009B8FD4 /* ViewController.swift in Sources */,
 				45C71D8D256C1E39009B8FD4 /* AppDelegate.swift in Sources */,
+				45C71DA9256C1F5D009B8FD4 /* MainTabController.swift in Sources */,
 				45C71D8F256C1E39009B8FD4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
