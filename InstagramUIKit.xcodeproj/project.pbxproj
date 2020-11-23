@@ -19,6 +19,8 @@
 		45C71DB4256C222F009B8FD4 /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DB3256C222F009B8FD4 /* ImageSelectorController.swift */; };
 		45C71DB7256C2242009B8FD4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DB6256C2242009B8FD4 /* NotificationController.swift */; };
 		45C71DBA256C2250009B8FD4 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DB9256C2250009B8FD4 /* ProfileController.swift */; };
+		45C71DBD256C30F8009B8FD4 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DBC256C30F8009B8FD4 /* FeedCell.swift */; };
+		45C71DC0256C31CF009B8FD4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DBF256C31CF009B8FD4 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		45C71DB3256C222F009B8FD4 /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
 		45C71DB6256C2242009B8FD4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		45C71DB9256C2250009B8FD4 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		45C71DBC256C30F8009B8FD4 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		45C71DBF256C31CF009B8FD4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		45C71DA1256C1EB5009B8FD4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				45C71DBF256C31CF009B8FD4 /* Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 		45C71DA5256C1EBC009B8FD4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				45C71DBC256C30F8009B8FD4 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C71D91256C1E39009B8FD4 /* ViewController.swift in Sources */,
+				45C71DBD256C30F8009B8FD4 /* FeedCell.swift in Sources */,
 				45C71DB4256C222F009B8FD4 /* ImageSelectorController.swift in Sources */,
 				45C71DB7256C2242009B8FD4 /* NotificationController.swift in Sources */,
 				45C71DB1256C2219009B8FD4 /* SearchController.swift in Sources */,
@@ -211,6 +218,7 @@
 				45C71DBA256C2250009B8FD4 /* ProfileController.swift in Sources */,
 				45C71DAE256C220B009B8FD4 /* FeedController.swift in Sources */,
 				45C71DA9256C1F5D009B8FD4 /* MainTabController.swift in Sources */,
+				45C71DC0256C31CF009B8FD4 /* Extensions.swift in Sources */,
 				45C71D8F256C1E39009B8FD4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
