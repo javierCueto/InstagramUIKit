@@ -136,10 +136,12 @@ extension UIView {
                bottom: view.bottomAnchor, right: view.rightAnchor)
     }
     
-    func myPrint(_ p: String){
-        let meesage = "_____ DEBUG: \(p) _____"
-        print(meesage)
-    }
+   
+}
+
+func myPrint(_ p: String){
+    let meesage = "_____ DEBUG: \(p) _____"
+    print(meesage)
 }
 
 
