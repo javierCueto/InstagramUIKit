@@ -25,6 +25,7 @@
 		45C71DC8256C7B33009B8FD4 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DC7256C7B33009B8FD4 /* RegistrationController.swift */; };
 		45C71DCB256D62AC009B8FD4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DCA256D62AC009B8FD4 /* CustomTextField.swift */; };
 		45C71DCE256D8BEA009B8FD4 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DCD256D8BEA009B8FD4 /* AuthButton.swift */; };
+		45C71DD1256DA273009B8FD4 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DD0256DA273009B8FD4 /* AuthenticationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		45C71DC7256C7B33009B8FD4 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		45C71DCA256D62AC009B8FD4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		45C71DCD256D8BEA009B8FD4 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		45C71DD0256DA273009B8FD4 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		45C71DA4256C1EBB009B8FD4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				45C71DD0256DA273009B8FD4 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				45C71DCE256D8BEA009B8FD4 /* AuthButton.swift in Sources */,
 				45C71D91256C1E39009B8FD4 /* ViewController.swift in Sources */,
 				45C71DC4256C7B20009B8FD4 /* LoginController.swift in Sources */,
+				45C71DD1256DA273009B8FD4 /* AuthenticationViewModel.swift in Sources */,
 				45C71DBD256C30F8009B8FD4 /* FeedCell.swift in Sources */,
 				45C71DB4256C222F009B8FD4 /* ImageSelectorController.swift in Sources */,
 				45C71DB7256C2242009B8FD4 /* NotificationController.swift in Sources */,
