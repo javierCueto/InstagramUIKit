@@ -11,7 +11,7 @@ class LoginController: UIViewController {
     
     // MARK: -  PROPERTIES
     private let iconImage: UIImageView = {
-       let iv = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
+        let iv = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
         iv.contentMode = .scaleAspectFill
         return iv
     }()
@@ -43,9 +43,9 @@ class LoginController: UIViewController {
     private let dontHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
         button.attributedTitle(firstPart: "Don't have an account?  ", secondPart: "Sign Up")
+        button.addTarget(self, action: #selector(showSignUpHandle), for: .touchUpInside)
         return button
     }()
-    
     
     private let forgotPasswordButton: UIButton = {
         let button = UIButton(type: .system)
@@ -59,20 +59,14 @@ class LoginController: UIViewController {
         configureUI()
     }
     
-
+    
     // MARK: -  HELPERS
     
     func configureUI(){
-        view.backgroundColor = .white
+        configureGradientLayer()
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .black
         
-        
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemPurple.cgColor,UIColor.systemBlue.cgColor]
-        gradient.locations=[0,1]
-        view.layer.addSublayer(gradient)
-        gradient.frame = view.frame
         
         view.addSubview(iconImage)
         iconImage.centerX(inView: view)
@@ -89,5 +83,12 @@ class LoginController: UIViewController {
         view.addSubview(dontHaveAccountButton)
         dontHaveAccountButton.centerX(inView: view)
         dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+    }
+    
+    // MARK: -  ACCTIONS
+    
+    @objc func showSignUpHandle(){
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
