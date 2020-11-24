@@ -21,6 +21,8 @@
 		45C71DBA256C2250009B8FD4 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DB9256C2250009B8FD4 /* ProfileController.swift */; };
 		45C71DBD256C30F8009B8FD4 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DBC256C30F8009B8FD4 /* FeedCell.swift */; };
 		45C71DC0256C31CF009B8FD4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DBF256C31CF009B8FD4 /* Extensions.swift */; };
+		45C71DC4256C7B20009B8FD4 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DC3256C7B20009B8FD4 /* LoginController.swift */; };
+		45C71DC8256C7B33009B8FD4 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DC7256C7B33009B8FD4 /* RegistrationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		45C71DB9256C2250009B8FD4 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		45C71DBC256C30F8009B8FD4 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		45C71DBF256C31CF009B8FD4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		45C71DC3256C7B20009B8FD4 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		45C71DC7256C7B33009B8FD4 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		45C71DA3256C1EBA009B8FD4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				45C71DC2256C7B0B009B8FD4 /* Authentication */,
 				45C71DA8256C1F5D009B8FD4 /* MainTabController.swift */,
 				45C71DAD256C220B009B8FD4 /* FeedController.swift */,
 				45C71DB0256C2219009B8FD4 /* SearchController.swift */,
@@ -137,6 +142,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		45C71DC2256C7B0B009B8FD4 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				45C71DC3256C7B20009B8FD4 /* LoginController.swift */,
+				45C71DC7256C7B33009B8FD4 /* RegistrationController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C71D91256C1E39009B8FD4 /* ViewController.swift in Sources */,
+				45C71DC4256C7B20009B8FD4 /* LoginController.swift in Sources */,
 				45C71DBD256C30F8009B8FD4 /* FeedCell.swift in Sources */,
 				45C71DB4256C222F009B8FD4 /* ImageSelectorController.swift in Sources */,
 				45C71DB7256C2242009B8FD4 /* NotificationController.swift in Sources */,
@@ -220,6 +235,7 @@
 				45C71DA9256C1F5D009B8FD4 /* MainTabController.swift in Sources */,
 				45C71DC0256C31CF009B8FD4 /* Extensions.swift in Sources */,
 				45C71D8F256C1E39009B8FD4 /* SceneDelegate.swift in Sources */,
+				45C71DC8256C7B33009B8FD4 /* RegistrationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
