@@ -1,0 +1,6 @@
+framework module Pods_InstagramUIKit {
+  umbrella header "Pods-InstagramUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
