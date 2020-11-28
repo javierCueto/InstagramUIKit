@@ -27,6 +27,8 @@
 		45C71DCB256D62AC009B8FD4 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DCA256D62AC009B8FD4 /* CustomTextField.swift */; };
 		45C71DCE256D8BEA009B8FD4 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DCD256D8BEA009B8FD4 /* AuthButton.swift */; };
 		45C71DD1256DA273009B8FD4 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C71DD0256DA273009B8FD4 /* AuthenticationViewModel.swift */; };
+		45D4BECA2572A1D2002E9F6D /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BEC92572A1D2002E9F6D /* ImageUploader.swift */; };
+		45D4BECD2572A1E4002E9F6D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BECC2572A1E4002E9F6D /* AuthService.swift */; };
 		C91B3C1BA094261F4D3FF6D6 /* Pods_InstagramUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192D63C4CC175AEB05C87862 /* Pods_InstagramUIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		45C71DCA256D62AC009B8FD4 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		45C71DCD256D8BEA009B8FD4 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		45C71DD0256DA273009B8FD4 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		45D4BEC92572A1D2002E9F6D /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		45D4BECC2572A1E4002E9F6D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		5E863F73C4B0538DE8EF4EF8 /* Pods-InstagramUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramUIKit.release.xcconfig"; path = "Target Support Files/Pods-InstagramUIKit/Pods-InstagramUIKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +124,8 @@
 		45C71DA2256C1EB8009B8FD4 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				45D4BEC92572A1D2002E9F6D /* ImageUploader.swift */,
+				45D4BECC2572A1E4002E9F6D /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -306,6 +312,8 @@
 			files = (
 				45C71DCB256D62AC009B8FD4 /* CustomTextField.swift in Sources */,
 				45C71DCE256D8BEA009B8FD4 /* AuthButton.swift in Sources */,
+				45D4BECA2572A1D2002E9F6D /* ImageUploader.swift in Sources */,
+				45D4BECD2572A1E4002E9F6D /* AuthService.swift in Sources */,
 				45C71D91256C1E39009B8FD4 /* ViewController.swift in Sources */,
 				45C71DC4256C7B20009B8FD4 /* LoginController.swift in Sources */,
 				45C71DD1256DA273009B8FD4 /* AuthenticationViewModel.swift in Sources */,
