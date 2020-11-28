@@ -119,7 +119,11 @@ class RegistrationController: UIViewController {
                 return
             }
             
-            myPrint("Succees register user with firestore ...")
+            self.dismiss(animated: true) {
+                let nav = MainTabController()
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
+            }
         }
     }
     

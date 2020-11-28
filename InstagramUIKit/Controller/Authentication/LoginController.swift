@@ -40,6 +40,7 @@ class LoginController: UIViewController {
         button.layer.cornerRadius = 5
         button.setHeight(50)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(loginHandle), for: .touchUpInside)
         return button
     }()
     
@@ -110,6 +111,25 @@ class LoginController: UIViewController {
         }
         
         updateForm()
+    }
+    
+    @objc func loginHandle(){
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        AuthService.logUserIn(with: email, password: password) { (result, error) in
+            if let error = error {
+                myPrint("error with login \(error.localizedDescription)")
+                return
+            }
+            
+            self.dismiss(animated: true) {
+                let nav = MainTabController()
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
+            }
+            
+        }
     }
     
     

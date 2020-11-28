@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainTabController: UITabBarController {
     
@@ -13,7 +14,12 @@ class MainTabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewControllers()
+        
     }
+    
+    // MARK: -  API
+    
+   
     
     // MARK: -  HELPERS
     func configureViewControllers(){
