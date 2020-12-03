@@ -31,6 +31,9 @@
 		45D4BECD2572A1E4002E9F6D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BECC2572A1E4002E9F6D /* AuthService.swift */; };
 		45D4BEFA2575682B002E9F6D /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BEF92575682B002E9F6D /* ProfileCell.swift */; };
 		45D4BEFF25756927002E9F6D /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BEFE25756927002E9F6D /* ProfileHeader.swift */; };
+		45D4BF0C25795A9D002E9F6D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF0B25795A9D002E9F6D /* UserService.swift */; };
+		45D4BF0F25795AE0002E9F6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF0E25795AE0002E9F6D /* Constants.swift */; };
+		45D4BF1225795D68002E9F6D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF1125795D68002E9F6D /* User.swift */; };
 		C91B3C1BA094261F4D3FF6D6 /* Pods_InstagramUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192D63C4CC175AEB05C87862 /* Pods_InstagramUIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		45D4BECC2572A1E4002E9F6D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		45D4BEF92575682B002E9F6D /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		45D4BEFE25756927002E9F6D /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		45D4BF0B25795A9D002E9F6D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		45D4BF0E25795AE0002E9F6D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		45D4BF1125795D68002E9F6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5E863F73C4B0538DE8EF4EF8 /* Pods-InstagramUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramUIKit.release.xcconfig"; path = "Target Support Files/Pods-InstagramUIKit/Pods-InstagramUIKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				45C71DBF256C31CF009B8FD4 /* Extensions.swift */,
+				45D4BF0E25795AE0002E9F6D /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -130,6 +137,7 @@
 			children = (
 				45D4BEC92572A1D2002E9F6D /* ImageUploader.swift */,
 				45D4BECC2572A1E4002E9F6D /* AuthService.swift */,
+				45D4BF0B25795A9D002E9F6D /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 		45C71DA6256C1EBE009B8FD4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				45D4BF1125795D68002E9F6D /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C71DCB256D62AC009B8FD4 /* CustomTextField.swift in Sources */,
+				45D4BF0F25795AE0002E9F6D /* Constants.swift in Sources */,
 				45C71DCE256D8BEA009B8FD4 /* AuthButton.swift in Sources */,
 				45D4BECA2572A1D2002E9F6D /* ImageUploader.swift in Sources */,
 				45D4BECD2572A1E4002E9F6D /* AuthService.swift in Sources */,
@@ -338,12 +348,14 @@
 				45C71DB1256C2219009B8FD4 /* SearchController.swift in Sources */,
 				45C71D8D256C1E39009B8FD4 /* AppDelegate.swift in Sources */,
 				45C71DBA256C2250009B8FD4 /* ProfileController.swift in Sources */,
+				45D4BF0C25795A9D002E9F6D /* UserService.swift in Sources */,
 				45C71DAE256C220B009B8FD4 /* FeedController.swift in Sources */,
 				45C71DA9256C1F5D009B8FD4 /* MainTabController.swift in Sources */,
 				45D4BEFA2575682B002E9F6D /* ProfileCell.swift in Sources */,
 				45C71DC0256C31CF009B8FD4 /* Extensions.swift in Sources */,
 				45C71D8F256C1E39009B8FD4 /* SceneDelegate.swift in Sources */,
 				45C71DC8256C7B33009B8FD4 /* RegistrationController.swift in Sources */,
+				45D4BF1225795D68002E9F6D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
