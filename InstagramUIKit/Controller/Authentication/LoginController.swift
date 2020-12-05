@@ -6,11 +6,17 @@
 //
 
 import UIKit
+protocol AuthenticationDelegate: class {
+    func auntenticationDidComplete()
+}
 
 class LoginController: UIViewController {
     
     // MARK: -  PROPERTIES
+    var isLoginWithoutClosing = false
+    
     private var viewModel = LoginViewModel()
+    weak var delegate: AuthenticationDelegate?
     
     private let iconImage: UIImageView = {
         let iv = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
@@ -100,6 +106,8 @@ class LoginController: UIViewController {
     
     @objc func showSignUpHandle(){
         let controller = RegistrationController()
+        controller.isLoginWithoutClosing = isLoginWithoutClosing
+        controller.delegate = delegate
         navigationController?.pushViewController(controller, animated: true)
     }
     
@@ -123,11 +131,17 @@ class LoginController: UIViewController {
                 return
             }
             
-            self.dismiss(animated: true) {
-                let nav = MainTabController()
-                nav.modalPresentationStyle = .fullScreen
-                self.present(nav, animated: true, completion: nil)
+            
+            if self.isLoginWithoutClosing{
+                self.delegate?.auntenticationDidComplete()
+            }else{
+                self.dismiss(animated: true) {
+                    let nav = MainTabController()
+                    nav.modalPresentationStyle = .fullScreen
+                    self.present(nav, animated: true, completion: nil)
+                }
             }
+           
             
         }
     }

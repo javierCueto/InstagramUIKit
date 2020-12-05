@@ -12,6 +12,8 @@ class RegistrationController: UIViewController {
     
     private var viewModel = RegistrationViewModel()
     private var profileImage: UIImage?
+    weak var delegate: AuthenticationDelegate?
+    var isLoginWithoutClosing = false
     
     private let plusPhotoButton: UIButton = {
         let button =  UIButton(type: .system)
@@ -119,11 +121,18 @@ class RegistrationController: UIViewController {
                 return
             }
             
-            self.dismiss(animated: true) {
-                let nav = MainTabController()
-                nav.modalPresentationStyle = .fullScreen
-                self.present(nav, animated: true, completion: nil)
+            
+            
+            if self.isLoginWithoutClosing{
+                self.delegate?.auntenticationDidComplete()
+            }else{
+                self.dismiss(animated: true) {
+                    let nav = MainTabController()
+                    nav.modalPresentationStyle = .fullScreen
+                    self.present(nav, animated: true, completion: nil)
+                }
             }
+
         }
     }
     
