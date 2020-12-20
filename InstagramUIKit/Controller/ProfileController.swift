@@ -97,12 +97,16 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 extension ProfileController: ProfileHeaderDelegate {
     func header(_ profileHeader: ProfileHeader, didTapActionButtonFor user: User) {
         if user.isCurrentUser {
-            
+            myPrint("Show edit profile here ...")
         }else if user.isFollowed {
-            
+            UserService.unfollow(uid: user.uid) { (error) in
+                self.user.isFollowed = false
+                self.collectionView.reloadData()
+            }
         }else {
             UserService.follow(uid: user.uid) { (error) in
-                print("Did follow user and, update UI Now")
+                self.user.isFollowed = true
+                self.collectionView.reloadData()
             }
         }
     }
