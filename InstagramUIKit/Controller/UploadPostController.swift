@@ -7,14 +7,25 @@
 
 import UIKit
 
+protocol UploadPostControllerDelegate: class {
+    func controllerDidFinishUploadingPost(_ controller: UploadPostController)
+}
+
 class UploadPostController: UIViewController{
     
+  
     // MARK: -  PROPERTIES
+    weak var delegate: UploadPostControllerDelegate?
+    var selectedImage: UIImage? {
+        didSet{
+            photoImageVIew.image = selectedImage
+        }
+    }
+    
     private let photoImageVIew: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
-        iv.image = #imageLiteral(resourceName: "venom-7")
         return iv
     }()
     
@@ -45,7 +56,15 @@ class UploadPostController: UIViewController{
     }
     
     @objc func didTapDone(){
-        myPrint("share post here")
+        guard let image = selectedImage else {return}
+        guard let caption = captionTextView.text else {return}
+        PostService.uploadPost(caption: caption, image: image) { (error) in
+            if let error = error {
+                myPrint("Failed to upload post with error \(error)")
+                return
+            }
+            self.delegate?.controllerDidFinishUploadingPost(self)
+        }
     }
     
     // MARK: -  HELPERS
