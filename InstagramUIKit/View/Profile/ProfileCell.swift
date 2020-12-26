@@ -10,6 +10,11 @@ import UIKit
 class ProfileCell: UICollectionViewCell {
     
     // MARK: -  PROPERTIES
+    var viewModel: PostViewModel? {
+        didSet{
+            configure()
+        }
+    }
     private let postImageView: UIImageView = {
         let iv = UIImageView()
         iv.image = #imageLiteral(resourceName: "venom-7")
@@ -32,4 +37,9 @@ class ProfileCell: UICollectionViewCell {
     }
     
     // MARK: -  HELPERS
+    
+    func configure(){
+        guard let viewModel = viewModel else {return}
+        postImageView.sd_setImage(with: viewModel.imageUrl)
+    }
 }

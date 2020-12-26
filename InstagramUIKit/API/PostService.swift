@@ -28,8 +28,20 @@ struct PostService {
     }
     
     static func fetchPost(completion: @escaping([Post]) -> Void){
-        COLLECTION_POST.order(by: "timestamp",descending: true).getDocuments { (snapshop, error) in
-            guard let documents = snapshop?.documents else {return}
+        COLLECTION_POST.order(by: "timestamp",descending: true).getDocuments { (snapshot, error) in
+            guard let documents = snapshot?.documents else {return}
+            
+            let posts = documents.map{( Post(postId: $0.documentID, dictionary: $0.data()) )}
+            
+            completion(posts)
+        }
+    }
+    
+    static func fetchPosts(forUser uid: String, completion: @escaping([Post]) -> Void){
+        let query = COLLECTION_POST.whereField("ownerUid", isEqualTo: uid)//.order(by: "timestamp",descending: true)
+        
+        query.getDocuments { (snapshot, error) in
+            guard let documents = snapshot?.documents else {return}
             
             let posts = documents.map{( Post(postId: $0.documentID, dictionary: $0.data()) )}
             
