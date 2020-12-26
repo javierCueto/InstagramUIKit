@@ -10,11 +10,24 @@ import Firebase
 private let reuseIdentifier = "Cell"
 
 class FeedController: UICollectionViewController{
+    // MARK: -  Properties
+    
+    private var posts = [Post]()
     
     // MARK: -  LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        fetchPosts()
+    }
+    
+    // MARK: -  API
+    
+    func fetchPosts(){
+        PostService.fetchPost { (posts) in
+            self.posts = posts
+            self.collectionView.reloadData()
+        }
     }
     
     // MARK: -  HELPERS
@@ -52,7 +65,7 @@ class FeedController: UICollectionViewController{
 // MARK: -  UICollectionViewDataSource
 extension FeedController{
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        posts.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
