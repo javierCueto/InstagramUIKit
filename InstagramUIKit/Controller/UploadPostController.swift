@@ -58,11 +58,14 @@ class UploadPostController: UIViewController{
     @objc func didTapDone(){
         guard let image = selectedImage else {return}
         guard let caption = captionTextView.text else {return}
+        showLoader(true)
         PostService.uploadPost(caption: caption, image: image) { (error) in
+            self.showLoader(false)
             if let error = error {
                 myPrint("Failed to upload post with error \(error)")
                 return
             }
+           
             self.delegate?.controllerDidFinishUploadingPost(self)
         }
     }
