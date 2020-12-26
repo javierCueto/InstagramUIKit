@@ -10,6 +10,11 @@ import UIKit
 class FeedCell: UICollectionViewCell {
     
     // MARK: -  PROPERTIES
+    var viewModel: PostViewModel? {
+        didSet{
+            configure()
+        }
+    }
     private let profileImageView: UIImageView = {
        let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
@@ -35,7 +40,6 @@ class FeedCell: UICollectionViewCell {
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.isUserInteractionEnabled = true
-        iv.image = #imageLiteral(resourceName: "venom-7")
         return iv
     }()
     
@@ -69,7 +73,6 @@ class FeedCell: UICollectionViewCell {
     
     private let captionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Some test caption for now"
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
@@ -127,6 +130,13 @@ class FeedCell: UICollectionViewCell {
     }
     
     // MARK: -  HELPERS
+    func configure(){
+        guard let viewModel = viewModel else {return}
+        captionLabel.text = viewModel.caption
+        postImageView.sd_setImage(with: viewModel.imageUrl)
+        likesLabel.text = "\(viewModel.likes)"
+    }
+    
     func configureActionsButton(){
         let stackView = UIStackView(arrangedSubviews: [likeButton, commentButton, shareButton])
         stackView.axis = .horizontal
