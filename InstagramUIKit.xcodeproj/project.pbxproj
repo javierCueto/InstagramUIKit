@@ -46,6 +46,7 @@
 		45D4BF0F25795AE0002E9F6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF0E25795AE0002E9F6D /* Constants.swift */; };
 		45D4BF1225795D68002E9F6D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF1125795D68002E9F6D /* User.swift */; };
 		45F55AA025AA050000CADA26 /* CommentServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F55A9F25AA050000CADA26 /* CommentServices.swift */; };
+		45F55AA325AA0C3800CADA26 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F55AA225AA0C3800CADA26 /* Comment.swift */; };
 		C91B3C1BA094261F4D3FF6D6 /* Pods_InstagramUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192D63C4CC175AEB05C87862 /* Pods_InstagramUIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		45D4BF0E25795AE0002E9F6D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		45D4BF1125795D68002E9F6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		45F55A9F25AA050000CADA26 /* CommentServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentServices.swift; sourceTree = "<group>"; };
+		45F55AA225AA0C3800CADA26 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		5E863F73C4B0538DE8EF4EF8 /* Pods-InstagramUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramUIKit.release.xcconfig"; path = "Target Support Files/Pods-InstagramUIKit/Pods-InstagramUIKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +217,7 @@
 			children = (
 				45D4BF1125795D68002E9F6D /* User.swift */,
 				45229C9E2597B4A1006D6557 /* Post.swift */,
+				45F55AA225AA0C3800CADA26 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				45D4BECA2572A1D2002E9F6D /* ImageUploader.swift in Sources */,
 				45D4BECD2572A1E4002E9F6D /* AuthService.swift in Sources */,
 				452608EE257BF9E700FD16D5 /* ProfileHeaderViewModel.swift in Sources */,
+				45F55AA325AA0C3800CADA26 /* Comment.swift in Sources */,
 				45C71D91256C1E39009B8FD4 /* ViewController.swift in Sources */,
 				4511889A258FC6C400CE5942 /* UploadPostController.swift in Sources */,
 				45229CA8259A4919006D6557 /* CommentController.swift in Sources */,
