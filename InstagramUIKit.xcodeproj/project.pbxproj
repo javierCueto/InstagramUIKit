@@ -47,6 +47,7 @@
 		45D4BF1225795D68002E9F6D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF1125795D68002E9F6D /* User.swift */; };
 		45F55AA025AA050000CADA26 /* CommentServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F55A9F25AA050000CADA26 /* CommentServices.swift */; };
 		45F55AA325AA0C3800CADA26 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F55AA225AA0C3800CADA26 /* Comment.swift */; };
+		45F55AA625AA122300CADA26 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F55AA525AA122300CADA26 /* CommentViewModel.swift */; };
 		C91B3C1BA094261F4D3FF6D6 /* Pods_InstagramUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192D63C4CC175AEB05C87862 /* Pods_InstagramUIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		45D4BF1125795D68002E9F6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		45F55A9F25AA050000CADA26 /* CommentServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentServices.swift; sourceTree = "<group>"; };
 		45F55AA225AA0C3800CADA26 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		45F55AA525AA122300CADA26 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		5E863F73C4B0538DE8EF4EF8 /* Pods-InstagramUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramUIKit.release.xcconfig"; path = "Target Support Files/Pods-InstagramUIKit/Pods-InstagramUIKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,6 +195,7 @@
 				452608ED257BF9E700FD16D5 /* ProfileHeaderViewModel.swift */,
 				45C156C325852DC500B0B5B8 /* UserCellViewModel.swift */,
 				45229CA12597BEC2006D6557 /* PostViewModel.swift */,
+				45F55AA525AA122300CADA26 /* CommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				452608F1257D3D3600FD16D5 /* UserCell.swift in Sources */,
 				45C71DB1256C2219009B8FD4 /* SearchController.swift in Sources */,
 				45C156C425852DC500B0B5B8 /* UserCellViewModel.swift in Sources */,
+				45F55AA625AA122300CADA26 /* CommentViewModel.swift in Sources */,
 				45C71D8D256C1E39009B8FD4 /* AppDelegate.swift in Sources */,
 				45C71DBA256C2250009B8FD4 /* ProfileController.swift in Sources */,
 				45229C9C2597A5A1006D6557 /* PostService.swift in Sources */,
