@@ -45,6 +45,7 @@
 		45D4BF0C25795A9D002E9F6D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF0B25795A9D002E9F6D /* UserService.swift */; };
 		45D4BF0F25795AE0002E9F6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF0E25795AE0002E9F6D /* Constants.swift */; };
 		45D4BF1225795D68002E9F6D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF1125795D68002E9F6D /* User.swift */; };
+		45F55AA025AA050000CADA26 /* CommentServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F55A9F25AA050000CADA26 /* CommentServices.swift */; };
 		C91B3C1BA094261F4D3FF6D6 /* Pods_InstagramUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192D63C4CC175AEB05C87862 /* Pods_InstagramUIKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		45D4BF0B25795A9D002E9F6D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		45D4BF0E25795AE0002E9F6D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		45D4BF1125795D68002E9F6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		45F55A9F25AA050000CADA26 /* CommentServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentServices.swift; sourceTree = "<group>"; };
 		5E863F73C4B0538DE8EF4EF8 /* Pods-InstagramUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramUIKit.release.xcconfig"; path = "Target Support Files/Pods-InstagramUIKit/Pods-InstagramUIKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +163,7 @@
 				45D4BECC2572A1E4002E9F6D /* AuthService.swift */,
 				45D4BF0B25795A9D002E9F6D /* UserService.swift */,
 				45229C9B2597A5A1006D6557 /* PostService.swift */,
+				45F55A9F25AA050000CADA26 /* CommentServices.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				45229C9C2597A5A1006D6557 /* PostService.swift in Sources */,
 				45D4BF0C25795A9D002E9F6D /* UserService.swift in Sources */,
 				45C71DAE256C220B009B8FD4 /* FeedController.swift in Sources */,
+				45F55AA025AA050000CADA26 /* CommentServices.swift in Sources */,
 				45C71DA9256C1F5D009B8FD4 /* MainTabController.swift in Sources */,
 				45D4BEFA2575682B002E9F6D /* ProfileCell.swift in Sources */,
 				45C71DC0256C31CF009B8FD4 /* Extensions.swift in Sources */,
