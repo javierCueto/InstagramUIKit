@@ -12,7 +12,11 @@ private let reuseIdentifier = "Cell"
 class FeedController: UICollectionViewController{
     // MARK: -  Properties
     
-    private var posts = [Post]()
+    private var posts = [Post]() {
+        didSet{
+            collectionView.reloadData()
+        }
+    }
     var post: Post?
     
     // MARK: -  LIFE CYCLE
@@ -38,7 +42,20 @@ class FeedController: UICollectionViewController{
         PostService.fetchPost { (posts) in
             self.posts = posts
             self.collectionView.refreshControl?.endRefreshing()
-            self.collectionView.reloadData()
+            self.checkIfUserLikedPost()
+           // self.collectionView.reloadData()
+        }
+    }
+    
+    func checkIfUserLikedPost(){
+        self.posts.forEach { (post) in
+            
+            PostService.checkIfUserLikedPost(post: post) { (didLike) in
+                if let index = self.posts.firstIndex(where: {$0.postID == post.postID}){
+                    self.posts[index].didlike = didLike
+                }
+            }
+            
         }
     }
     
@@ -129,9 +146,10 @@ extension FeedController: FeedCellDelegate {
     func cell(_ cell: FeedCell, didLike post: Post) {
         cell.viewModel?.post.didlike.toggle()
         if post.didlike {
+            cell.viewModel?.post.likes -= 1
             PostService.unLikePost(post: post) { (_) in
                cell.likeButton.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
-                cell.likeButton.tintColor = .black
+                cell.likeButton.tintColor = .black 
             }
         }else {
             cell.viewModel?.post.likes += 1

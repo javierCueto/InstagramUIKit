@@ -14,12 +14,17 @@ struct PostViewModel {
         return URL(string: post.imageUrl)
     }
     
-    var likeColor: UIColor {
+    var likeButtonTintColor: UIColor {
         if post.didlike {
-            return .white
+            return .red
         }else{
             return .black
         }
+    }
+    
+    var likeButtonImage: UIImage? {
+        let image = post.didlike ? "like_selected" : "like_unselected"
+        return UIImage(named: image)
     }
     
     var caption: String {
