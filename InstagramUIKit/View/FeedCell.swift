@@ -50,7 +50,7 @@ class FeedCell: UICollectionViewCell {
         return iv
     }()
     
-    private lazy var likeButton: UIButton = {
+     lazy var likeButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
         button.tintColor = .black
@@ -157,6 +157,7 @@ class FeedCell: UICollectionViewCell {
         likesLabel.text = viewModel.likesLabelText
         userNameButton.setTitle(viewModel.ownerUsername, for: .normal)
         profileImageView.sd_setImage(with: viewModel.ownerImageUrl)
+        likeButton.tintColor = viewModel.likeColor
     }
     
     func configureActionsButton(){

@@ -5,13 +5,21 @@
 //  Created by Javier Cueto on 26/12/20.
 //
 
-import Foundation
+import UIKit
 
 struct PostViewModel {
-     let post: Post
+    var post: Post
     
     var imageUrl: URL?{
         return URL(string: post.imageUrl)
+    }
+    
+    var likeColor: UIColor {
+        if post.didlike {
+            return .white
+        }else{
+            return .black
+        }
     }
     
     var caption: String {
