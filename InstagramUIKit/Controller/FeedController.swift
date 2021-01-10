@@ -126,5 +126,14 @@ extension FeedController: FeedCellDelegate {
         navigationController?.pushViewController(controller, animated: true)
     }
     
+    func cell(_ cell: FeedCell, didLike post: Post) {
+        if post.didlike {
+           
+        }else {
+            
+        }
+    }
+    
+
     
 }
