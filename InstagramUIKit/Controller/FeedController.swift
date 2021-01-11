@@ -41,9 +41,8 @@ class FeedController: UICollectionViewController{
         guard post == nil else {return}
         PostService.fetchPost { (posts) in
             self.posts = posts
-            self.collectionView.refreshControl?.endRefreshing()
             self.checkIfUserLikedPost()
-           // self.collectionView.reloadData()
+            self.collectionView.refreshControl?.endRefreshing()
         }
     }
     
@@ -149,7 +148,7 @@ extension FeedController: FeedCellDelegate {
             cell.viewModel?.post.likes -= 1
             PostService.unLikePost(post: post) { (_) in
                cell.likeButton.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
-                cell.likeButton.tintColor = .black 
+                cell.likeButton.tintColor = .black
             }
         }else {
             cell.viewModel?.post.likes += 1
