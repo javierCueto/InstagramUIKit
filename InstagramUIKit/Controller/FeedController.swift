@@ -152,16 +152,19 @@ extension FeedController: FeedCellDelegate {
     func cell(_ cell: FeedCell, didLike post: Post) {
         cell.viewModel?.post.didlike.toggle()
         if post.didlike {
-            cell.viewModel?.post.likes -= 1
             PostService.unLikePost(post: post) { (_) in
                cell.likeButton.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
                 cell.likeButton.tintColor = .black
+                cell.viewModel?.post.likes -= 1
             }
         }else {
-            cell.viewModel?.post.likes += 1
+            
             PostService.likePost(post: post) { (_) in
                 cell.likeButton.setImage(#imageLiteral(resourceName: "like_selected"), for: .normal)
                 cell.likeButton.tintColor = .red
+                cell.viewModel?.post.likes += 1
+                
+                NotificationService.uploadNotification(toUid: post.ownerUid, type: .like, post: post)
             }
         }
     }
