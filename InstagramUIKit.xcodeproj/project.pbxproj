@@ -46,6 +46,7 @@
 		45D4BF0F25795AE0002E9F6D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF0E25795AE0002E9F6D /* Constants.swift */; };
 		45D4BF1225795D68002E9F6D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D4BF1125795D68002E9F6D /* User.swift */; };
 		45F4224A25B3E0E100C07CA1 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4224925B3E0E100C07CA1 /* NotificationCell.swift */; };
+		45F4224D25B4D84900C07CA1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4224C25B4D84900C07CA1 /* Notification.swift */; };
 		45F55AA025AA050000CADA26 /* CommentServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F55A9F25AA050000CADA26 /* CommentServices.swift */; };
 		45F55AA325AA0C3800CADA26 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F55AA225AA0C3800CADA26 /* Comment.swift */; };
 		45F55AA625AA122300CADA26 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F55AA525AA122300CADA26 /* CommentViewModel.swift */; };
@@ -96,6 +97,7 @@
 		45D4BF0E25795AE0002E9F6D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		45D4BF1125795D68002E9F6D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		45F4224925B3E0E100C07CA1 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		45F4224C25B4D84900C07CA1 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		45F55A9F25AA050000CADA26 /* CommentServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentServices.swift; sourceTree = "<group>"; };
 		45F55AA225AA0C3800CADA26 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		45F55AA525AA122300CADA26 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				45D4BF1125795D68002E9F6D /* User.swift */,
 				45229C9E2597B4A1006D6557 /* Post.swift */,
 				45F55AA225AA0C3800CADA26 /* Comment.swift */,
+				45F4224C25B4D84900C07CA1 /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				45229CAE259A58DA006D6557 /* CommentInputAccesoryView.swift in Sources */,
 				45C71DB4256C222F009B8FD4 /* ImageSelectorController.swift in Sources */,
 				45C71DB7256C2242009B8FD4 /* NotificationController.swift in Sources */,
+				45F4224D25B4D84900C07CA1 /* Notification.swift in Sources */,
 				4511889D258FD2D400CE5942 /* InputTextView.swift in Sources */,
 				452608F1257D3D3600FD16D5 /* UserCell.swift in Sources */,
 				45C71DB1256C2219009B8FD4 /* SearchController.swift in Sources */,
