@@ -18,5 +18,16 @@ struct NotificationViewModel {
     
     var profileImageUrl: URL? { return URL(string: notification.userProfileImageUrl )}
     
-    var ownerUser: String { return notification.username}
+    var notificationMessage: NSAttributedString{
+        let username = notification.username
+        let message = notification.type.notificationMessage
+        
+        let attributedString = NSMutableAttributedString(string: "\(username)", attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
+        attributedString.append(NSMutableAttributedString(string: message, attributes: [.font: UIFont.systemFont(ofSize: 14)]))
+        
+        attributedString.append(NSMutableAttributedString(string: " 2m", attributes: [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.lightGray]))
+        
+        return attributedString
+        
+    }
 }
