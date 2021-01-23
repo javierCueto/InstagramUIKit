@@ -21,15 +21,13 @@ class NotificationCell: UITableViewCell {
     
     weak var delegate: NotificationCellDelegate?
     
-    private lazy var profileImageView: UIImageView = {
+    private let profileImageView: UIImageView = {
        let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.isUserInteractionEnabled = true
         iv.image = #imageLiteral(resourceName: "venom-7")
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleImageProfileTapped))
-        iv.isUserInteractionEnabled = true
-        iv.addGestureRecognizer(tap)
+
         return iv
     }()
     
@@ -68,22 +66,22 @@ class NotificationCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         
-        addSubview(profileImageView)
+        contentView.addSubview(profileImageView)
         profileImageView.setDimensions(height: 48, width: 48)
         profileImageView.layer.cornerRadius = 48 / 2
         profileImageView.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 12)
         
        
         
-        addSubview(followButton)
+        contentView.addSubview(followButton)
         followButton.centerY(inView: self)
         followButton.anchor(right: rightAnchor, paddingRight: 12, width: 88, height: 32)
         
-        addSubview(postImageView)
+        contentView.addSubview(postImageView)
         postImageView.centerY(inView: self)
         postImageView.anchor(right: rightAnchor, paddingRight: 12, width: 40, height: 40)
         
-        addSubview(infoLabel)
+        contentView.addSubview(infoLabel)
         infoLabel.centerY(inView: profileImageView, leftAnchor: profileImageView.rightAnchor, paddingLeft: 8)
        // infoLabel.anchor(right: followButton.leftAnchor, paddingRight: 4)
         
@@ -113,16 +111,19 @@ class NotificationCell: UITableViewCell {
     
     
     // MARK: -  Actions
-    @objc func handleImageProfileTapped(){
-        print("follow tapped")
-    }
+
     
     @objc func handleFollowTap(){
-        print("follow tapped")
+        guard let viewModel = viewModel else {return}
+        if viewModel.notification.userIsFollowed{
+            delegate?.cell(self, wantsToUnFollow: viewModel.notification.uid)
+        }else{
+            delegate?.cell(self, wantsToFollow: viewModel.notification.uid)
+        }
     }
     
     @objc func handlePostTapped(){
-        print("image tapped")
+     
         guard let postId = viewModel?.notification.postId else {return}
         delegate?.cell(self, wantsToViewPost: postId )
     }

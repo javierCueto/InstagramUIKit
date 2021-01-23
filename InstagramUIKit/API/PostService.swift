@@ -27,13 +27,22 @@ struct PostService {
         }
     }
     
-    static func fetchPost(completion: @escaping([Post]) -> Void){
+    static func fetchPosts(completion: @escaping([Post]) -> Void){
         COLLECTION_POST.order(by: "timestamp",descending: true).getDocuments { (snapshot, error) in
             guard let documents = snapshot?.documents else {return}
             
             let posts = documents.map{( Post(postId: $0.documentID, dictionary: $0.data()) )}
             
             completion(posts)
+        }
+    }
+    
+    static func fetchPost(withPostId postID: String, completion: @escaping(Post)-> Void){
+        COLLECTION_POST.document(postID).getDocument { (snapshot, _) in
+            guard let snapshot = snapshot else {return}
+            guard let data = snapshot.data() else {return}
+            let post = Post(postId: snapshot.documentID, dictionary: data)
+            completion(post)
         }
     }
     
