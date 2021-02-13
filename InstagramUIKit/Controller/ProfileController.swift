@@ -32,6 +32,8 @@ class ProfileController: UICollectionViewController{
         checkIfUserIsFollowed()
         fetchUserStats()
         fetchPosts()
+        
+
     }
     
     // MARK: -  API
@@ -139,9 +141,11 @@ extension ProfileController: ProfileHeaderDelegate {
             UserService.follow(uid: user.uid) { (error) in
                 self.user.isFollowed = true
                 self.collectionView.reloadData()
+                NotificationService.uploadNotification(toUid: user.uid, fromUser: currentUser, type: .follow)
+                PostService.updateUserFeedAfterFollowing(user: user)
             }
             
-            NotificationService.uploadNotification(toUid: user.uid, fromUser: currentUser, type: .follow)
+           
         }
     }
     

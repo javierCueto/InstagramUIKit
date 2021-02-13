@@ -30,9 +30,7 @@ struct PostService {
     static func fetchPosts(completion: @escaping([Post]) -> Void){
         COLLECTION_POST.order(by: "timestamp",descending: true).getDocuments { (snapshot, error) in
             guard let documents = snapshot?.documents else {return}
-            
             let posts = documents.map{( Post(postId: $0.documentID, dictionary: $0.data()) )}
-            
             completion(posts)
         }
     }
@@ -90,6 +88,38 @@ struct PostService {
             guard let didLike = snapshot?.exists else { return }
             
             completion(didLike)
+        }
+    }
+    
+    static func fetchFeedPost(completion: @escaping([Post])-> Void){
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        var posts = [Post]()
+        COLLECTION_USERS.document(uid).collection("user-feed").getDocuments { (snapshot, error) in
+            snapshot?.documents.forEach({ (document) in
+                fetchPost(withPostId: document.documentID) { (post) in
+                    posts.append(post)
+                    completion(posts)
+                }
+   
+            })
+     
+        }
+      
+    }
+    
+    static func updateUserFeedAfterFollowing(user: User){
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let query = COLLECTION_POST.whereField("ownerUid", isEqualTo: user.uid)
+        query.getDocuments { (snapshot, error) in
+            guard let documents = snapshot?.documents else { return }
+            
+            let docIDs = documents.map({$0.documentID})
+            
+            docIDs.forEach { (id) in
+                COLLECTION_USERS.document(uid).collection("user-feed").document(id).setData([:])
+            }
+            
         }
     }
 }
