@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450CBC2225D98976009B9629 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450CBC2125D98976009B9629 /* ResetPasswordController.swift */; };
 		4511889A258FC6C400CE5942 /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45118899258FC6C400CE5942 /* UploadPostController.swift */; };
 		4511889D258FD2D400CE5942 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4511889C258FD2D400CE5942 /* InputTextView.swift */; };
 		45229C9C2597A5A1006D6557 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45229C9B2597A5A1006D6557 /* PostService.swift */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		192D63C4CC175AEB05C87862 /* Pods_InstagramUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7265D122F36FE39A24DF12 /* Pods-InstagramUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramUIKit.debug.xcconfig"; path = "Target Support Files/Pods-InstagramUIKit/Pods-InstagramUIKit.debug.xcconfig"; sourceTree = "<group>"; };
+		450CBC2125D98976009B9629 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		45118899258FC6C400CE5942 /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
 		4511889C258FD2D400CE5942 /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		45229C9B2597A5A1006D6557 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			children = (
 				45C71DC3256C7B20009B8FD4 /* LoginController.swift */,
 				45C71DC7256C7B33009B8FD4 /* RegistrationController.swift */,
+				450CBC2125D98976009B9629 /* ResetPasswordController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				45D4BECA2572A1D2002E9F6D /* ImageUploader.swift in Sources */,
 				45D4BECD2572A1E4002E9F6D /* AuthService.swift in Sources */,
 				452608EE257BF9E700FD16D5 /* ProfileHeaderViewModel.swift in Sources */,
+				450CBC2225D98976009B9629 /* ResetPasswordController.swift in Sources */,
 				45F55AA325AA0C3800CADA26 /* Comment.swift in Sources */,
 				45C71D91256C1E39009B8FD4 /* ViewController.swift in Sources */,
 				4511889A258FC6C400CE5942 /* UploadPostController.swift in Sources */,

@@ -60,6 +60,7 @@ class LoginController: UIViewController {
     private let forgotPasswordButton: UIButton = {
         let button = UIButton(type: .system)
         button.attributedTitle(firstPart: "Forgot you password?  ", secondPart: "Get help signing in.")
+        button.addTarget(self, action: #selector(handleShowResetPassword), for: .touchUpInside)
         return button
     }()
     
@@ -144,6 +145,13 @@ class LoginController: UIViewController {
            
             
         }
+    }
+    
+    @objc func handleShowResetPassword(){
+        let controller = ReserPasswordController()
+      //  controller.isLoginWithoutClosing = isLoginWithoutClosing
+        //controller.delegate = delegate
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     
