@@ -7,10 +7,17 @@
 
 import UIKit
 
+protocol ResetPassWordControllerDelegate: class {
+    func controlletDidSendResetPasswordLink(_ controller: ReserPasswordController)
+}
+
 class ReserPasswordController: UIViewController {
     // MARK: -  Properties
     private let emailTextField = CustomTextField(placeholder: "Email")
     private let iconImage = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
+    private var viewModel = ResetPasswordViewModel()
+    weak var delegate: ResetPassWordControllerDelegate?
+    
     
     private let resetPasswordButton: UIButton = {
         let button = UIButton(type: .system)
@@ -42,6 +49,8 @@ class ReserPasswordController: UIViewController {
     // MARK: -  Helpers
     func configureUI(){
         configureGradientLayer()
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        
         view.addSubview(backButton)
         backButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, paddingTop: 16, paddingLeft: 16)
         
@@ -62,12 +71,40 @@ class ReserPasswordController: UIViewController {
     
     // MARK: -  Actions
     @objc func handleResetPassword(){
-        
+        guard let email = emailTextField.text else { return }
+        showLoader(true)
+        AuthService.resetPassword(withEmail: email) { (error) in
+            if let error = error {
+                self.showMessage(withTitle: "Error", message: error.localizedDescription)
+                self.showLoader(false)
+                return
+            }
+            
+            self.delegate?.controlletDidSendResetPasswordLink(self)
+        }
     }
     
     @objc func handleDismissal(){
         navigationController?.popViewController(animated: true)
     }
+    
+    
+    @objc func textDidChange(sender: UITextField){
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        }
+        updateForm()
+    }
+    
+}
+
+extension ReserPasswordController: FormViewModel {
+    func updateForm() {
+        resetPasswordButton.backgroundColor = viewModel.buttonBackgroundColor
+        resetPasswordButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        resetPasswordButton.isEnabled = viewModel.formIsValid
+    }
+    
 }
 
 
