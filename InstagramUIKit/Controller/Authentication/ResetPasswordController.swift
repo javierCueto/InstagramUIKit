@@ -17,7 +17,7 @@ class ReserPasswordController: UIViewController {
     private let iconImage = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
     private var viewModel = ResetPasswordViewModel()
     weak var delegate: ResetPassWordControllerDelegate?
-    
+    public var email: String?
     
     private let resetPasswordButton: UIButton = {
         let button = UIButton(type: .system)
@@ -49,6 +49,9 @@ class ReserPasswordController: UIViewController {
     // MARK: -  Helpers
     func configureUI(){
         configureGradientLayer()
+        emailTextField.text = email
+        viewModel.email = email
+        updateForm()
         emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         
         view.addSubview(backButton)

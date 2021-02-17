@@ -17,7 +17,9 @@ class FeedController: UICollectionViewController{
             collectionView.reloadData()
         }
     }
-    var post: Post?
+    var post: Post? {
+        didSet { checkIfUserLikedPost() }
+    }
     
     // MARK: -  LIFE CYCLE
     override func viewDidLoad() {
@@ -41,6 +43,7 @@ class FeedController: UICollectionViewController{
     func fetchPosts(){
         guard post == nil else {return}
         PostService.fetchFeedPost { (posts) in
+            myPrint("_________________ se llamo esta funcion")
             self.posts = posts
             self.checkIfUserLikedPost()
             self.collectionView.refreshControl?.endRefreshing()
@@ -48,11 +51,18 @@ class FeedController: UICollectionViewController{
     }
     
     func checkIfUserLikedPost(){
-        self.posts.forEach { (post) in
-            
+        if let post = post {
             PostService.checkIfUserLikedPost(post: post) { (didLike) in
-                if let index = self.posts.firstIndex(where: {$0.postID == post.postID}){
-                    self.posts[index].didlike = didLike
+                self.post?.didlike = didLike
+                self.collectionView.reloadData()
+            }
+        }
+        else{
+            self.posts.forEach { (post) in
+                PostService.checkIfUserLikedPost(post: post) { (didLike) in
+                    if let index = self.posts.firstIndex(where: {$0.postID == post.postID}){
+                        self.posts[index].didlike = didLike
+                    }
                 }
             }
             
@@ -68,7 +78,7 @@ class FeedController: UICollectionViewController{
             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutHandle))
             
         }
-     
+        
         navigationItem.title = "Feed"
         
         
@@ -119,7 +129,7 @@ extension FeedController{
         }else {
             cell.viewModel = PostViewModel(post: posts[indexPath.row])
         }
-
+        
         return cell
     }
 }
@@ -157,7 +167,7 @@ extension FeedController: FeedCellDelegate {
         cell.viewModel?.post.didlike.toggle()
         if post.didlike {
             PostService.unLikePost(post: post) { (_) in
-               cell.likeButton.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
+                cell.likeButton.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
                 cell.likeButton.tintColor = .black
                 cell.viewModel?.post.likes -= 1
             }
@@ -173,6 +183,6 @@ extension FeedController: FeedCellDelegate {
         }
     }
     
-
+    
     
 }
