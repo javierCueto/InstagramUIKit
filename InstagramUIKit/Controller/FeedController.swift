@@ -18,7 +18,9 @@ class FeedController: UICollectionViewController{
         }
     }
     var post: Post? {
-        didSet { checkIfUserLikedPost() }
+        didSet {
+            self.collectionView.reloadData()
+        }
     }
     
     // MARK: -  LIFE CYCLE
@@ -41,12 +43,17 @@ class FeedController: UICollectionViewController{
     // MARK: -  API
     
     func fetchPosts(){
-        guard post == nil else {return}
-        PostService.fetchFeedPost { (posts) in
-            myPrint("_________________ se llamo esta funcion")
-            self.posts = posts
-            self.checkIfUserLikedPost()
+       // guard post == nil else {return}
+        if let _ = post {
+            checkIfUserLikedPost()
             self.collectionView.refreshControl?.endRefreshing()
+        }else{
+            PostService.fetchFeedPost { (posts) in
+                myPrint("_________________ se llamo esta funcion")
+                self.posts = posts
+                self.checkIfUserLikedPost()
+                self.collectionView.refreshControl?.endRefreshing()
+            }
         }
     }
     
@@ -54,7 +61,6 @@ class FeedController: UICollectionViewController{
         if let post = post {
             PostService.checkIfUserLikedPost(post: post) { (didLike) in
                 self.post?.didlike = didLike
-                self.collectionView.reloadData()
             }
         }
         else{

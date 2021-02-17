@@ -169,6 +169,7 @@ class FeedCell: UICollectionViewCell {
         profileImageView.sd_setImage(with: viewModel.ownerImageUrl)
         likeButton.tintColor = viewModel.likeButtonTintColor
         likeButton.setImage(viewModel.likeButtonImage, for: .normal)
+        posTimeLabel.text = viewModel.timestampString
     }
     
     func configureActionsButton(){
